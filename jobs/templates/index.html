@@ -1,0 +1,16 @@
+{% if latest_job_list %}
+
+    <h1>Latest Batch Jobs</h1>
+    {% for job in latest_job_list %}
+    <div>
+        <p>Batch Number: {{job.batch_number}}</p>
+        <p>Submitted At: {{job.submitted_at}}</p>
+        <p>Nodes Used: {{job.nodes_used}}</p>
+    </div>
+    <br>
+    {% endfor %}
+
+    
+{% else %}
+    <p>No jobs are available.</p>
+{% endif %}
